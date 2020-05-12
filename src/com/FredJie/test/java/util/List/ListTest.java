@@ -1,5 +1,7 @@
 package com.FredJie.test.java.util.List;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -17,11 +19,12 @@ import java.util.List;
  */
 public class ListTest {
     public static void main(String[] args) {
+        List<String> newlist = new ArrayList<>();
+        newlist.add("s");
         String[] arrays = {"1", "2", "3"};
         List<String> list = Arrays.asList(arrays);
-
+        list.stream().forEach(System.out::print);
         list.add("4");
-
 
     }
 }
